@@ -46,7 +46,7 @@ class MyCartViewBody extends StatelessWidget {
             value: '\$ 50.97',
             valueStyle: Styles.style24,
           ),
-          SizedBox(height: 5),
+          Spacer(),
           GestureDetector(
             child: Container(
               width: double.infinity,

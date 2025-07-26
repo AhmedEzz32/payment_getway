@@ -9,6 +9,14 @@ abstract class Styles {
     fontFamily: fontFamily,
     color: Colors.black,
     height: 0,
+  );  
+  
+  static const TextStyle style20 = TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.w600,
+    fontFamily: fontFamily,
+    color: Colors.black,
+    height: 0,
   );
 
   static const TextStyle style18 = TextStyle(
