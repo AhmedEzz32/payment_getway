@@ -4,9 +4,10 @@ import 'package:payment_getway/core/utils/styles.dart';
 import 'package:payment_getway/features/checkout/persentation/widgets/order_info_item.dart';
 
 class MyCartViewBody extends StatelessWidget {
-
+  final VoidCallback? onTap;
   const MyCartViewBody({
     super.key,
+    this.onTap,
   });
 
   @override
@@ -22,6 +23,7 @@ class MyCartViewBody extends StatelessWidget {
               height: 277,
             ),
           ),
+          SizedBox(height: 8),
           OrderInfoItem(
             title: 'Order Subtotal',
             value: '\$ 42.97',
@@ -48,6 +50,7 @@ class MyCartViewBody extends StatelessWidget {
           ),
           Spacer(),
           GestureDetector(
+            onTap: onTap,
             child: Container(
               width: double.infinity,
               height: height * 0.11,

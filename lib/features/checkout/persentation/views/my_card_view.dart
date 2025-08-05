@@ -9,7 +9,7 @@ class MyCardView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MyCartViewAppbar(),
-      body:  MyCartViewBody(),
+      body: MyCartViewBody(),
     );
   }
 }
