@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:payment_getway/core/utils/styles.dart';
 
 class MyCartViewAppbar extends StatelessWidget implements PreferredSizeWidget {
+
+  final String text;
+
   const MyCartViewAppbar({
     super.key,
+    required this.text,
   });
 
   @override
@@ -15,8 +19,8 @@ class MyCartViewAppbar extends StatelessWidget implements PreferredSizeWidget {
       ),
       elevation: 0,
       centerTitle: true,
-      title: const Text(
-        'My Cart',
+      title: Text(
+        text,
         textAlign: TextAlign.center,
         style: Styles.style25,
       ),
