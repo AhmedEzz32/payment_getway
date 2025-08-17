@@ -13,9 +13,12 @@ class MyCartViewAppbar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leading: Icon(
-        Icons.arrow_back_outlined,
-        color: Colors.black,
+      leading: GestureDetector(
+        onTap: () => Navigator.pop(context),
+        child: Icon(
+          Icons.arrow_back_outlined,
+          color: Colors.black,
+        ),
       ),
       elevation: 0,
       centerTitle: true,
