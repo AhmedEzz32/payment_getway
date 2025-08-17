@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:payment_getway/core/assets.dart/assets.dart';
 import 'package:payment_getway/core/utils/styles.dart';
+import 'package:payment_getway/features/checkout/persentation/widgets/custom_button.dart';
 import 'package:payment_getway/features/checkout/persentation/widgets/order_info_item.dart';
 
 class MyCartViewBody extends StatelessWidget {
@@ -12,7 +13,6 @@ class MyCartViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.sizeOf(context).height;
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 18.0),
       child: Column(
@@ -43,28 +43,15 @@ class MyCartViewBody extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 4.0),
             child: Divider(color: Color(0xffC7C7C7)),
           ),
-          OrderInfoItem(
+          OrderInfoItem(  
             title: 'Total',
             value: '\$ 50.97',
             valueStyle: Styles.style24,
           ),
           Spacer(),
-          GestureDetector(
+          CustomButton(
             onTap: onTap,
-            child: Container(
-              width: double.infinity,
-              height: height * 0.11,
-              decoration: BoxDecoration(
-                color: Color(0xff34A853),
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Center(
-                child: Text(
-                  'Complete Payment',
-                  style: Styles.style20,
-                ),
-              ),
-            ),
+            text: 'Complete Payment',
           ),
         ],  
       ),

@@ -21,7 +21,7 @@ class PaymentMethodItem extends StatelessWidget {
       height: 62,
       decoration: ShapeDecoration(
         shape: RoundedRectangleBorder(
-          side: BorderSide(width: 1.5, color: isActive ?  Color(0xff34a853) : Colors.grey),
+          side: BorderSide(width: 1, color: isActive ?  Colors.green : Colors.grey),
           borderRadius: BorderRadius.circular(15),
         ),
         shadows: [

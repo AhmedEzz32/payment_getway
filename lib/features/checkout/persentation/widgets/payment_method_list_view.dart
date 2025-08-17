@@ -21,7 +21,7 @@ class _PaymentMethodListViewState extends State<PaymentMethodListView> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 62,
+      height: 52,
       child: ListView.builder(
         itemCount: paymentMethodItems.length,
         scrollDirection: Axis.horizontal,
