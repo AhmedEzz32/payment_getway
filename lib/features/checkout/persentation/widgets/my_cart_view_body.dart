@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:payment_getway/core/assets.dart/assets.dart';
 import 'package:payment_getway/core/utils/styles.dart';
-import 'package:payment_getway/features/checkout/persentation/widgets/custom_button.dart';
+import 'package:payment_getway/features/checkout/persentation/widgets/custom_button_bloc_consumer.dart';
 import 'package:payment_getway/features/checkout/persentation/widgets/order_info_item.dart';
 
 class MyCartViewBody extends StatelessWidget {
@@ -49,10 +49,7 @@ class MyCartViewBody extends StatelessWidget {
             valueStyle: Styles.style24,
           ),
           Spacer(),
-          CustomButton(
-            onTap: onTap,
-            text: 'Complete Payment',
-          ),
+          CustomButtonBlocConsumer(),
         ],  
       ),
     );

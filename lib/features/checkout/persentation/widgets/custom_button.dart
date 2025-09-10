@@ -5,13 +5,14 @@ class CustomButton extends StatelessWidget {
 
   final VoidCallback? onTap;
   final String text;
+  final bool isLoading;
 
   const CustomButton({
     super.key,
     required this.onTap,
     required this.text,
+    this.isLoading = false,
   });
-
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,8 @@ class CustomButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
         ),
         child: Center(
-          child: Text(
+          child: isLoading ? CircularProgressIndicator()
+          : Text(
             text,
             style: Styles.style20,
           ),

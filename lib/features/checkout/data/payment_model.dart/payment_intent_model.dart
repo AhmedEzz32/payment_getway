@@ -7,11 +7,11 @@ class PaymentIntentModel {
   final String object;
   final int amount;
   final int amountCapturable;
-  final AmountDetailsModel amountDetails;
+  final AmountDetailsModel? amountDetails;
   final int amountReceived;
   final String? application;
   final int? applicationFeeAmount;
-  final AutomaticPaymentMethodsModel automaticPaymentMethods;
+  final AutomaticPaymentMethodsModel? automaticPaymentMethods;
   final int? canceledAt;
   final String? cancellationReason;
   final String captureMethod;
@@ -24,12 +24,12 @@ class PaymentIntentModel {
   final dynamic lastPaymentError;
   final dynamic latestCharge;
   final bool livemode;
-  final Map<String, dynamic> metadata;
+  final Map<String, dynamic>? metadata;
   final dynamic nextAction;
   final dynamic onBehalfOf;
   final dynamic paymentMethod;
-  final PaymentMethodOptionsModel paymentMethodOptions;
-  final List<String> paymentMethodTypes;
+  final PaymentMethodOptionsModel? paymentMethodOptions;
+  final List<dynamic>? paymentMethodTypes;
   final dynamic processing;
   final dynamic receiptEmail;
   final dynamic review;
@@ -47,11 +47,11 @@ class PaymentIntentModel {
     required this.object,
     required this.amount,
     required this.amountCapturable,
-    required this.amountDetails,
+    this.amountDetails,
     required this.amountReceived,
     this.application,
     this.applicationFeeAmount,
-    required this.automaticPaymentMethods,
+    this.automaticPaymentMethods,
     this.canceledAt,
     this.cancellationReason,
     required this.captureMethod,
@@ -64,12 +64,12 @@ class PaymentIntentModel {
     this.lastPaymentError,
     this.latestCharge,
     required this.livemode,
-    required this.metadata,
+    this.metadata,
     this.nextAction,
     this.onBehalfOf,
     this.paymentMethod,
-    required this.paymentMethodOptions,
-    required this.paymentMethodTypes,
+    this.paymentMethodOptions,
+    this.paymentMethodTypes,
     this.processing,
     this.receiptEmail,
     this.review,
@@ -89,11 +89,9 @@ class PaymentIntentModel {
       object: json['object'],
       amount: json['amount'],
       amountCapturable: json['amount_capturable'],
-      amountDetails: AmountDetailsModel.fromJson(json['amount_details']),
       amountReceived: json['amount_received'],
       application: json['application'],
       applicationFeeAmount: json['application_fee_amount'],
-      automaticPaymentMethods: AutomaticPaymentMethodsModel.fromJson(json['automatic_payment_methods']),
       canceledAt: json['canceled_at'],
       cancellationReason: json['cancellation_reason'],
       captureMethod: json['capture_method'],
@@ -106,12 +104,10 @@ class PaymentIntentModel {
       lastPaymentError: json['last_payment_error'],
       latestCharge: json['latest_charge'],
       livemode: json['livemode'],
-      metadata: Map<String, dynamic>.from(json['metadata']),
       nextAction: json['next_action'],
+      paymentMethodTypes: json['payment_method_types'] as List<dynamic>?,
       onBehalfOf: json['on_behalf_of'],
       paymentMethod: json['payment_method'],
-      paymentMethodOptions: PaymentMethodOptionsModel.fromJson(json['payment_method_options']),
-      paymentMethodTypes: List<String>.from(json['payment_method_types']),
       processing: json['processing'],
       receiptEmail: json['receipt_email'],
       review: json['review'],

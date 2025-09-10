@@ -9,7 +9,7 @@ class PaymentIntentInputModel {
 
   toJson() {
     return {
-      'amount': amount,
+      'amount': (double.parse(amount) * 100).ceil(),
       'currency': currency,
     };
   }
