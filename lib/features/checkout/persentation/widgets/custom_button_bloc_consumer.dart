@@ -28,12 +28,10 @@ class CustomButtonBlocConsumer extends StatelessWidget {
             child: BlocConsumer<StripePaymentCubit, StripePaymentState>(
               listener: (context, state) {
                 if (state is PaymentFailure) {
-                  Navigator.pop(context);
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(content: Text(state.error)),
                   );
                 } else if (state is PaymentSuccess) {
-                  Navigator.pop(context);
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(builder: (context) => const ThankYouView()),
@@ -44,7 +42,6 @@ class CustomButtonBlocConsumer extends StatelessWidget {
                 return PaymentMethodBottomSheet(
                   isLoading: state is PaymentLoading,
                   onContinue: (index) {
-                    Navigator.pop(context);
                     if (index == 0) {
                       stripePayment(context);
                     } else if (index == 1) {
