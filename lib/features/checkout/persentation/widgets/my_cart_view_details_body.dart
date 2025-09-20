@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:payment_getway/features/checkout/persentation/views/thank_you_view.dart';
 import 'package:payment_getway/features/checkout/persentation/widgets/custom_button.dart';
 import 'package:payment_getway/features/checkout/persentation/widgets/custom_credit_card.dart';
-import 'package:payment_getway/features/checkout/persentation/widgets/payment_method_list_view.dart';
 
 class MyCartViewDetailsBody extends StatefulWidget {
   const MyCartViewDetailsBody({super.key});
@@ -20,9 +19,6 @@ class _MyCartViewDetailsBodyState extends State<MyCartViewDetailsBody> {
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
-        SliverToBoxAdapter(
-          child: PaymentMethodListView(),
-        ),
         SliverToBoxAdapter(
           child: CustomCreditCard(
             formKey: formKey,

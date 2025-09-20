@@ -1,16 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:payment_getway/core/assets.dart/assets.dart';
 import 'package:payment_getway/features/checkout/persentation/widgets/custom_button.dart';
 import 'payment_method_list_view.dart';
 
-class PaymentMethodBottomSheet extends StatelessWidget {
+class PaymentMethodBottomSheet extends StatefulWidget {
   final bool isLoading;
-  final VoidCallback? onTap;
+  final Function(int index)? onContinue;
 
   const PaymentMethodBottomSheet({
     super.key,
     required this.isLoading,
-    this.onTap,
+    this.onContinue,
   });
+
+  @override
+  State<PaymentMethodBottomSheet> createState() => _PaymentMethodBottomSheetState();
+}
+
+class _PaymentMethodBottomSheetState extends State<PaymentMethodBottomSheet> {
+
+  int selectedIndex = 0;
+
+  List<String> paymentMethodItems = const [
+    Assets.assetsImagesCard,
+    Assets.assetsImagesPaypal,
+    Assets.assetsImagesMasterCard,
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -20,11 +35,18 @@ class PaymentMethodBottomSheet extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           SizedBox(height: 32),
-          PaymentMethodListView(),
+          PaymentMethodListView(
+            onSelected: (index) {
+              selectedIndex = index;
+              setState(() {});
+            },
+            selectedIndex: selectedIndex,
+            paymentMethodItems: paymentMethodItems,
+          ),
           SizedBox(height: 16),
           CustomButton(
-            isLoading: isLoading,
-            onTap: onTap,
+            isLoading: widget.isLoading,
+            onTap: () => widget.onContinue?.call(selectedIndex),
             text: 'Continue',
           ),
         ],

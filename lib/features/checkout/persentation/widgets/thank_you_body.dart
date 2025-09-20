@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:payment_getway/features/checkout/persentation/views/my_card_view.dart';
 import 'package:payment_getway/features/checkout/persentation/widgets/custom_check_icon.dart';
 import 'package:payment_getway/features/checkout/persentation/widgets/custom_dashed_line.dart';
 import 'package:payment_getway/features/checkout/persentation/widgets/thank_you_card.dart';
@@ -14,7 +15,10 @@ class ThankYouBody extends StatelessWidget {
           top: 10,
           left: 5,
           child: GestureDetector(
-            onTap: () => Navigator.pop(context),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => MyCardView()),
+            ),
             child: Icon(
               Icons.arrow_back_outlined,
               color: Colors.black,
