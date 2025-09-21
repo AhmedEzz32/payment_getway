@@ -8,7 +8,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:payment_getway/features/checkout/persentation/views/my_card_view.dart';
+import 'package:payment_getway/persentation/my_card/view/my_card_view.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
