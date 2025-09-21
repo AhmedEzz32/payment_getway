@@ -44,3 +44,10 @@ The app implements secure payment processing:
 
 ## UI Design
 The UI design follows modern Material Design 3 principles with responsive layouts. The home screen displays products with clean visual hierarchy, shopping cart with intuitive management, and payment screens with secure form validation. Custom animations enhance user interaction while maintaining accessibility standards.
+
+![WhatsApp Image 2025-09-21 at 15 45 43](https://github.com/user-attachments/assets/57ae9e88-0569-4079-b026-03b9a2af7884)
+![WhatsApp Image 2025-09-21 at 15 45 43 (1)](https://github.com/user-attachments/assets/32db6fea-98e6-467f-badd-5e1c8814ddc8)
+![WhatsApp Image 2025-09-21 at 15 45 43 (2)](https://github.com/user-attachments/assets/d36217e4-41ed-4d6f-a408-419e31d7a286)
+![WhatsApp Image 2025-09-21 at 15 45 43 (3)](https://github.com/user-attachments/assets/de3e9a03-4199-45ab-a42a-5a60100cfcfb)
+![WhatsApp Image 2025-09-21 at 15 45 43 (4)](https://github.com/user-attachments/assets/069c4dcd-25a7-42b3-94ff-f246418a5534)
+![WhatsApp Image 2025-09-21 at 15 45 43 (5)](https://github.com/user-attachments/assets/e888991f-f829-43ea-8212-2162985f25aa)
