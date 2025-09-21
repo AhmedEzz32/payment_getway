@@ -1,4 +1,4 @@
-# Payment Gateway E-commerce App
+# Payment Gateway
 This Flutter app demonstrates a complete shopping experience with integrated payment solutions using the MVVM architecture and Provider for state management with multiple payment gateways including Stripe and PayPal.
 
 ## Features
